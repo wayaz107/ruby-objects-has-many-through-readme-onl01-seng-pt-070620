@@ -14,5 +14,10 @@ def self.all
   @@all
 end
 
+def meals
+  Meal.all.select {|meal|meal.waiter ==self}
+end
 
-end 
+
+
+end
